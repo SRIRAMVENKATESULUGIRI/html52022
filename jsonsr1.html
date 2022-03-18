@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let stud1 = {'name':'harish','dept':'CSE','rollno':1063,'location':'thiruvallur','DOB':'06-11-2001'};
+        let stud2 = {'name':'sunil','dept':'ECE','rollno':1064,'location':'thiruvallur','DOB':'08-10-2000'};
+        var stud=[];
+        stud.push(stud1);
+        stud.push(stud2);
+        console.log(stud);
+        
+          for(let m in stud)
+          {
+            let s=document.createElement('ul');
+            // s.innerHTML="<ul>";
+            // list-style-type="none"
+            
+            // s.style.listStyleType="none";
+            console.log(stud[m]['name']);
+        s.innerHTML=`<li>${stud[m]['name']}</li>`;
+        s.innerHTML+=`<li>${stud[m]['dept']}</li>`;
+        s.innerHTML+=`<li>${stud[m]['rollno']}</li>`;
+        // s.innerHTML+=`<li>${stud['dept']}</li>`;
+        s.innerHTML+='</ul>';
+        s.style.width="200px";
+        s.style.height="200px";
+        s.style.marginLeft="20px";
+        s.style.fontFamily="roboto";
+        s.style.backgroundColor="yellow";
+        document.body.appendChild(s);
+          }
+        
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var names=['harish','sunil','ajay'];
+        console.log(names.length);
+        names.length=10;
+        names[5]="karthik";
+        names.push("bharath");
+        names.push("charan");
+        // for(let i=0;i<names.length;i++)
+        // {
+        //     console.log(names[i]);
+        // }
+        for(let i of names)
+        {
+            console.log(i);
+        }
+      names.splice(2,1);  // remove element at index 2
+        // names.forEach(function(a){
+        //     console.log(a);
+        // })
+        
+    </script>
+</body>
+</html>

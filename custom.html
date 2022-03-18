@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>custom attributes</title>
+</head>
+<body>
+    <input type="text" id="user"  data-errormsg="username not empty" data-successmsg="success">
+    <span id="myid"></span><br/>
+    <button id="mybtn" onclick="myfun()">click</button>
+    <script>
+    function myfun()
+    {
+        var s=document.getElementById("user");
+        var m=document.querySelector("#myid");
+        if(s.value.length==0)
+        {
+            m.innerHTML=s.dataset.errormsg;
+            m.style.color="red";
+            alert(s.dataset.errormsg);
+        }
+        else
+        {
+            m.innerHTML=s.dataset.successmsg+" "+s.value;
+            m.style.color="green";
+        }
+        
+    }
+    </script>
+</body>
+</html>

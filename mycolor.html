@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --fg-color1: black;
+            --bg-color1: white;
+            --fg-color2: white;
+            --bg-color2: black;
+        }
+
+        .day {
+            color: var(--fg-color1);
+            background-color: var(--bg-color1);
+        }
+
+        .night {
+            color: var(--fg-color2);
+            background-color: var(--bg-color2);
+        }
+
+        /* h4
+{
+  color:var(--fg-color);
+  background-color: yellow;
+} */
+
+        /* h5
+{
+    color:var(--fg-color);
+} */
+    </style>
+</head>
+
+<body>
+
+    <!-- <i class="fa fa-toggle-on"></i> -->
+    <i id="myid" class="fa fa-toggle-off" onclick="myfun()"></i>
+    <h4>Blockchain Technology</h4>
+    <h5>it is the latest technology</h5>
+
+    <script>
+        window.onload=myfun();
+        
+        function myfun() {
+            var s = document.querySelector("#myid");
+            if (s.classList.contains("fa-toggle-off")) {
+                s.classList.add('fa-toggle-on');
+                s.classList.remove('fa-toggle-off');
+                document.body.classList.remove('night');
+                document.body.classList.add('day');
+
+            }
+            else {
+                s.classList.remove('fa-toggle-on');
+                s.classList.add('fa-toggle-off');
+                document.body.classList.remove('day');
+                document.body.classList.add('night');
+            }
+        }
+    </script>
+</body>
+
+</html>
